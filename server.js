@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+var bodyParser = require('body-parser');
 
 var ECT = require('ect');
 var ectRenderer = ECT({ watch: true, root: __dirname + '/views', ext : '.ect' });
@@ -9,15 +9,21 @@ app.set('view engine', 'ect');
 app.engine('ect', ectRenderer.render);
 
 app.use(express.static('static'));
-
+ 
 app.get('/', function (req, res){
 	var data = { title : 'Hello, World!' };
   res.render('index', data);
 });
 
-app.post('/', function (req, res){
-	console.log("get post!");
-  res.redirect("/");
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+// POST /login gets urlencoded bodies
+app.post('/', urlencodedParser, function (req, res){
+  if (!req.body) return res.sendStatus(400);
+	console.log("get post!"+req.body.intxt_1);
+  res.send('welcome, ' + req.body.intxt_1);
+ // res.redirect("/");
   
 });
 
