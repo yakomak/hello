@@ -12,119 +12,25 @@
                     <div class="uk-form-row">
                         <label class="uk-form-label" for="form-h-it">Say to node!</label>
                         <div class="uk-form-controls">
-                            <input type="text" id="data" placeholder="Text input" name="intxt_1">
+                            <input type="text" id="data" placeholder="Text input" name="message">
                         </div>  
                     </div>
                     <div class="uk-form-row">
                         <input type="submit" class="uk-button">
                     </div>
                 </form>
+
+                <hr>
+
+                <ul class="uk-list-line">
+                    <% for message in @messages : %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
             </div>
         </div>
-    </div><br /><br />
-
-    <div class="icon-test">
-        <i class="uk-icon-home">Home</i>
     </div>
-    
-<div class="uk-grid">
-    <div class="uk-width-1-2">.uk-width-1-2---1..</div>
-    <div class="uk-width-1-3">.uk-width-1-3---2..</div>
-</div><br /><br />
-<div class="uk-grid">
-    <div class="uk-width-2-10">.uk-width-2-10---..</div>
-    <div class=" uk-grid uk-grid-divider">.uk-width-1-3--1..</div>
-    <div class=" uk-grid uk-grid-divider">.uk-width-1-3--2..</div>
-</div>
-<div class="uk-width-8-10">.uk-width-8-10--22..</div>
-<div class="uk-width" style="width:180px; border: 2px; border:solid; margin:1px; border-radius: 7px;">.линое сдлово-текст.</div>
 
-<ul class="uk-grid uk-grid-width-1-6" style="width:420px; border: 2px; border:solid;">
-    <li style="border: 2px;">.rjhj,rf.</li>
-    <li style="border: 2px;">.коробка..</li>
-    <li style="border: 2px;">.ящик</li>
-    <li style="border: 2px;">.короб..</li>
-</ul>
-
-<a href="" class="uk-icon-justify uk-icon-bar-chart">иконочка</a>
-<div class="uk-visible-hover-inline" style="width:200px;">сюда...
-    <div class="uk-hidden">скрытый-!-ТЕКСТ</div>
-</div>
-<div class="uk-scrollable-box" style="width:150px;">
-    <ul class="uk-list">
-        <li><label><input type="checkbox">СТРОКА 1</label></li>
-        <li><label><input type="checkbox">строчка 2</label></li>
-        <li><label><input type="checkbox">СТРОКА 1</label></li>
-        <li><label><input type="checkbox">строчка 2</label></li>
-    </ul>
-</div>
-<div class="uk-offcanvas-bar">меню
-    <ul class="uk-nav uk-nav-offcanvas">
-    <li>geyrn1</li>
-    <li>geyrn2</li>
-    <li>geyrn3</li>
-    </ul>
-    <ul class="uk-nav uk-nav-offcanvas">втор</ul>
-    <ul class="uk-nav uk-nav-offcanvas">три</ul>
-</div>
-<button class="uk-button" data-uk-offcanvas="{target:'#offcanvas-1'}"><font><font class="">Off-холст</font></font></button>
-<div id="offcanvas-1" class="uk-offcanvas" aria-hidden="true">
-
-                                <div class="uk-offcanvas-bar" mode="push">
-
-                                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
-                                        <li><a href="#"><font><font>Пункт</font></font></a></li>
-                                        <li class="uk-active"><a href="#"><font><font>активный</font></font></a></li>
-
-                                        <li class="uk-parent" aria-expanded="false">
-                                            <a href="#"><font><font>родитель</font></font></a>
-                                            <div style="overflow: hidden; position: relative; height: 0px;" class="uk-hidden"><ul class="uk-nav-sub" role="menu">
-                                                <li><a href="#"><font><font>Подпункт</font></font></a></li>
-                                                <li><a href="#"><font><font>Подпункт</font></font></a>
-                                                    <ul>
-                                                        <li><a href="#"><font><font>Подпункт</font></font></a></li>
-                                                        <li><a href="#"><font><font>Подпункт</font></font></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul></div>
-                                        </li>
-
-                                        <li class="uk-parent" aria-expanded="false">
-                                            <a href="#"><font><font>родитель</font></font></a>
-                                            <div style="overflow: hidden; position: relative; height: 0px;" class="uk-hidden"><ul class="uk-nav-sub" role="menu">
-                                                <li><a href="#"><font><font>Подпункт</font></font></a></li>
-                                                <li><a href="#"><font><font>Подпункт</font></font></a></li>
-                                            </ul></div>
-                                        </li>
-
-                                        <li><a href="#"><font><font>Пункт</font></font></a></li>
-
-                                        <li class="uk-nav-header"><font><font>заголовок</font></font></li>
-                                        <li class="uk-parent" aria-expanded="false"><a href="#"><i class="uk-icon-star"></i><font><font> родитель</font></font></a></li>
-                                        <li><a href="#"><i class="uk-icon-twitter"></i><font><font> Пункт</font></font></a></li>
-                                        <li class="uk-nav-divider"></li>
-                                        <li><a href="#"><i class="uk-icon-rss"></i><font><font> Пункт</font></font></a></li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-
-
-<div class="uk-position-top-left">
-    <div class="uk-badge uk-badge-success">.1.bcfb</div>
-    <div class="uk-badge uk-badge-warning"> 2.bfbfgcb</div>
-    <div class="uk-badge uk-badge-danger">.3.что-то</div>
-</div>
-
-<div class="uk-grid">
-    <div class="uk-width-medium-1-10">
-        <div class="uk-panel uk-panel-divider">gth первый</div>
-        <div class="uk-panel uk-panel-divider">второй</div>
-        <div class="uk-panel uk-panel-divider">третий</div>
-    </div>
-</div>
 
 
 </body>
