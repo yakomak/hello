@@ -3,6 +3,8 @@
 <head>
     <title>Hello</title>
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <!-- библиотека LoDash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
 </head>
 <body>
     <div class="uk-container uk-container-center main-container">
@@ -10,9 +12,9 @@
             <div class="uk-width-1-2 uk-container-center">
                 <form class="uk-form" action="/" method="POST">
                     <div class="uk-form-row">
-                        <label class="uk-form-label" for="form-h-it">Say to node!</label>
+                        <label class="uk-form-label" for="message-input">Message</label>
                         <div class="uk-form-controls">
-                            <input type="text" id="data" placeholder="Text input" name="message">
+                            <textarea class="uk-width-1-1" name="message" placeholder="Text input" id="message-input"  rows="3"></textarea>
                         </div>  
                     </div>
                     <div class="uk-form-row">
@@ -22,10 +24,19 @@
 
                 <hr>
 
-                <ul class="uk-list-line">
-                    <% for message in @messages : %>
-                        <li><%= message %></li>
-                    <% end %>
+                  
+                <ul class="uk-list uk-list-line">
+                    <% for msg in @msgs : %>
+                        <li>
+                           <div class="uk-article">
+                                <div class="date uk-article-meta">
+                                    <%= msg.created_at %>
+                                    <a href="/msg/<%= msg.id %>" class="del-msg uk-icon-hover uk-icon-trash-o"></a>
+                                </div>
+                                <p class="uk-article-lead"><%= msg.text %></p>
+                            </div>
+                        </li>
+                    <% end %>  
                 </ul>
             </div>
         </div>
