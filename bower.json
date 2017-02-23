@@ -1,0 +1,24 @@
+{
+  "name": "user",
+  "description": "bower",
+  "main": "server.js",
+  "authors": [
+    "yakomak <yakomak137@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bwr"
+  ],
+  "homepage": "https://github.com/yakomak/hello",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "^2.27.2"
+  }
+}
