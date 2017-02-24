@@ -16,7 +16,8 @@ var g_messages = [
   {
     id: 1,
     text: "Hello, this first message!",
-    created_at: 0  
+    created_at: 1430000000000 ,
+    createdd: 143000
   }
 ];
 
@@ -26,7 +27,8 @@ function formatMessages(messages) {
       return {
         id: val.id,
         text: val.text,
-        created_at: moment(val.created_at).fromNow()
+        created_at: moment(val.created_at).fromNow(),
+        createdd: moment(val.created_at).format('lll')
       };
     }))
   };
@@ -56,6 +58,11 @@ app.get('/msg/:id', function (req, res){
   res.redirect('/');
 });
 
-app.listen(3001, function () {
-  console.log('Example app listening on port 3001!');
+app.get('/msg/:id*', function (req, res){
+  _.remove(g_messages, {id: parseInt(req.params.id, 10)});
+  res.redirect('/');
+});
+
+app.listen(3011, function () {
+  console.log('Example app listening on port 3011!');
 });
